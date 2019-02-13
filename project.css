@@ -38,6 +38,11 @@ body {
     float: left;
 }
 
+.button.link {
+     background:none;
+     border:none; 
+}
+
 .team-details tr {
     text-align: center;
 }
@@ -84,6 +89,23 @@ body {
     color: white;
 }
 
+.dropdown-content {
+    display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
 .navbar li:hover {
     background-color: white;
     color: black;
@@ -99,7 +121,7 @@ body {
 .search-functions li {
     display: inline;
     position: relative;
-    left: 65vmax;
+    left: 70vmax;
 }
 
 .search-functions input [type=text]{
@@ -117,7 +139,6 @@ body {
     position: sticky;
     background-color:#EEDA22;
     border: 3px solid white;
-    height: 100%;
     width: 250px;
 }
 
@@ -130,13 +151,16 @@ body {
 }
 
 .user-table{
-    position: relative;
-    width: 100%;
-    z-index: -5;
+    z-index: -1;
+    overflow: visible;
 }
 
 .user-table table {
     border-collapse: collapse;
+    width: 80%;
+    overflow:hidden;
+    float:right;
+    min-width: 80%;
 }
 
 .user-table th {
@@ -149,8 +173,9 @@ body {
     padding: 15px;
 }
 
-.user-table tr:nth-child(even) {
+.user-table tr:nth-child(odd) {
     background-color: black;
+    color: white;
 }
 
 .user-table tr:nth-child(even) {
